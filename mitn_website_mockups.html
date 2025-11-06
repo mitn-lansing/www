@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MITN - Lansing | Website Design Mockups</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: #f8fafc;
+        }
+        
+        .mockup-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .mockup-title {
+            text-align: center;
+            font-size: 36px;
+            color: #1e3a8a;
+            margin: 40px 0;
+            font-weight: bold;
+        }
+        
+        .mockup-section {
+            margin-bottom: 60px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .mockup-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .mockup-content {
+            padding: 0;
+        }
+        
+        /* Homepage Design */
+        .homepage {
+            background: white;
+        }
+        
+        .nav-bar {
+            background: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: #334155;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #1e3a8a;
+            border-bottom-color: #22c55e;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 30px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #22c55e;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+        
+        .features {
+            padding: 80px 30px;
+            background: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #1e3a8a;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+        
+        .feature-desc {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        .upcoming-events {
+            padding: 80px 30px;
+            background: #f8fafc;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #1e3a8a;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .event-date {
+            background: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .event-day {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .event-month {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .event-content {
+            padding: 25px;
+        }
+        
+        .event-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .event-details {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .event-desc {
+            color: #334155;
+            line-height: 1.5;
+        }
+        
+        /* About Page Design */
+        .about-hero {
+            padding: 60px 30px;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            text-align: center;
+        }
+        
+        .about-title {
+            font-size: 42px;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .about-subtitle {
+            font-size: 20px;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            padding: 80px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .about-text p {
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            background: #e2e8f0;
+            border-radius: 12px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 18px;
+        }
+        
+        .stats-section {
+            background: #1e3a8a;
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #22c55e;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Events Page Design */
+        .events-header {
+            padding: 60px 30px;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            text-align: center;
+        }
+        
+        .events-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .events-filter {
+            background: white;
+            padding: 30px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 10px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            background: white;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-tab.active {
+            border-color: #1e3a8a;
+            background: #1e3a8a;
+            color: white;
+        }
+        
+        .events-list {
+            padding: 60px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 60px 30px 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-section h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #22c55e;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #3b82f6;
+            color: #cbd5e1;
+        }
+        
+        .mobile-note {
+            background: #22c55e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .features-grid, .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mockup-container">
+        <h1 class="mockup-title">MITN - Lansing | Website Design Mockups</h1>
+        <div class="mobile-note">📱 Responsive design - all layouts adapt to mobile devices</div>
+        
+        <!-- Homepage Mockup -->
+        <div class="mockup-section">
+            <div class="mockup-header">Homepage Design</div>
+            <div class="mockup-content homepage">
+                <nav class="nav-bar">
+                    <div class="logo">MITN - Lansing</div>
+                    <div class="nav-links">
+                        <a href="#" class="nav-link active">Home</a>
+                        <a href="#" class="nav-link">About</a>
+                        <a href="#" class="nav-link">Events</a>
+                        <a href="#" class="nav-link">Fellowship</a>
+                        <a href="#" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+                
+                <section class="hero">
+                    <h1>Michigan Technology Network</h1>
+                    <p>Connecting and empowering tech professionals across Greater Lansing through education, networking, and community building</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">Join Our Community</a>
+                        <a href="#" class="btn btn-secondary">Upcoming Events</a>
+                    </div>
+                </section>
+                
+                <section class="features">
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🤝</div>
+                            <h3 class="feature-title">Networking Events</h3>
+                            <p class="feature-desc">Connect with like-minded tech professionals through our regular mixers, meetups, and collaborative events.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🎓</div>
+                            <h3 class="feature-title">Educational Programs</h3>
+                            <p class="feature-desc">Enhance your skills through workshops, presentations, and learning opportunities designed for all experience levels.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💰</div>
+                            <h3 class="feature-title">Fellowship Program</h3>
+                            <p class="feature-desc">Annual $2,500 fellowships supporting technology-based educational initiatives in our community.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="upcoming-events">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">15</div>
+                                <div class="event-month">JUN 2025</div>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="event-title">MITN Summer Networking Mixer</h3>
+                                <div class="event-details">📍 Reno's East, East Lansing • 6:00-8:00 PM</div>
+                                <p class="event-desc">Join us for our summer networking event! Connect with local tech professionals, share experiences, and build lasting relationships in the Lansing tech community.</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">22</div>
+                                <div class="event-month">JUN 2025</div>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="event-title">AI & Machine Learning Workshop</h3>
+                                <div class="event-details">📍 LCC West Campus • 1:00-4:00 PM</div>
+                                <p class="event-desc">Hands-on workshop exploring the latest trends in AI and machine learning. Perfect for developers looking to expand their skillset.</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">05</div>
+                                <div class="event-month">JUL 2025</div>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="event-title">Fellowship Application Deadline</h3>
+                                <div class="event-details">💰 $2,500 Award • Online Application</div>
+                                <p class="event-desc">Last chance to apply for our annual fellowship program supporting technology-based educational initiatives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- About Page Mockup -->
+        <div class="mockup-section">
+            <div class="mockup-header">About Page Design</div>
+            <div class="mockup-content">
+                <nav class="nav-bar">
+                    <div class="logo">MITN - Lansing</div>
+                    <div class="nav-links">
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link active">About</a>
+                        <a href="#" class="nav-link">Events</a>
+                        <a href="#" class="nav-link">Fellowship</a>
+                        <a href="#" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+                
+                <section class="about-hero">
+                    <h1 class="about-title">About MITN - Lansing</h1>
+                    <p class="about-subtitle">Strengthening Michigan's technology community through connection, education, and collaboration</p>
+                </section>
+                
+                <section class="about-content">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <h3>Our Mission</h3>
+                            <p>The Michigan Technology Network (MITN) is a statewide organization based in Greater Lansing, dedicated to enhancing the development of tech professionals through educational and networking events with a strong focus on community building.</p>
+                            <p>We believe that by connecting talented individuals and providing opportunities for growth, we can strengthen the entire technology ecosystem in Michigan.</p>
+                        </div>
+                        <div class="about-image">
+                            [Mission Image Placeholder]
+                        </div>
+                    </div>
+                    
+                    <div class="about-grid">
+                        <div class="about-image">
+                            [Community Image Placeholder]
+                        </div>
+                        <div class="about-text">
+                            <h3>What We Do</h3>
+                            <p>MITN organizes regular networking events, educational workshops, and collaborative sessions that bring together professionals from across the technology spectrum. From seasoned developers to emerging talent, our community welcomes everyone.</p>
+                            <p>Our annual Fellowship program provides $2,500 awards to support technology-based educational initiatives, helping to grow the next generation of tech leaders in Michigan.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Community Members</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Events Hosted</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Fellowship Recipients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10</div>
+                            <div class="stat-label">Years Active</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Events Page Mockup -->
+        <div class="mockup-section">
+            <div class="mockup-header">Events Page Design</div>
+            <div class="mockup-content">
+                <nav class="nav-bar">
+                    <div class="logo">MITN - Lansing</div>
+                    <div class="nav-links">
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">About</a>
+                        <a href="#" class="nav-link active">Events</a>
+                        <a href="#" class="nav-link">Fellowship</a>
+                        <a href="#" class="nav-link">Contact</a>
+                    </div>
+                </nav>
+                
+                <section class="events-header">
+                    <h1 class="events-title">Events & Workshops</h1>
+                    <p>Join us for networking, learning, and community building opportunities</p>
+                </section>
+                
+                <section class="events-filter">
+                    <div class="filter-tabs">
+                        <div class="filter-tab active">All Events</div>
+                        <div class="filter-tab">Networking</div>
+                        <div class="filter-tab">Workshops</div>
+                        <div class="filter-tab">Conferences</div>
+                        <div class="filter-tab">Social</div>
+                    </div>
+                </section>
+                
+                <section class="events-list">
+                    <div class="events-grid">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">15</div>
+                                <div class="event-month">JUN 2025</div>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="event-title">MITN Summer Networking Mixer</h3>
+                                <div class="event-details">📍 Reno's East, East Lansing • 6:00-8:00 PM</div>
+                                <p class="event-desc">Join us for our summer networking event! Connect with local tech professionals, share experiences, and build lasting relationships.</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">22</div>
+                                <div class="event-month">JUN 2025</div>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="event-title">AI & Machine Learning Workshop</h3>
+                                <div class="event-details">📍 LCC West Campus • 1:00-4:00 PM</div>
+                                <p class="event-desc">Hands-on workshop exploring the latest trends in AI and machine learning. Perfect for expanding your skillset.</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <div class="event-date">
+                                <div class="event-day">08</div>
+                                <div class="event-month">JUL 2025</div>
+                            </div>
+                            <div class="event-content">
+                                <h3 class="event-title">Cybersecurity Best Practices</h3>
+                                <div class="event-details">📍 Virtual Event • 12:00-2:00 PM</div>
+                                <p class="event-desc">Learn essential cybersecurity practices for modern development. Includes real-world case studies and practical tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <footer class="footer">
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h4>MITN - Lansing</h4>
+                            <p>Michigan Technology Network</p>
+                            <p>Greater Lansing, MI</p>
+                            <p>Building tech community since 2014</p>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Quick Links</h4>
+                            <p><a href="#">About Us</a></p>
+                            <p><a href="#">Upcoming Events</a></p>
+                            <p><a href="#">Fellowship Program</a></p>
+                            <p><a href="#">Contact</a></p>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Connect</h4>
+                            <p><a href="#">Join Our Mailing List</a></p>
+                            <p><a href="#">LinkedIn</a></p>
+                            <p><a href="#">Twitter</a></p>
+                            <p><a href="#">GitHub</a></p>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Get Involved</h4>
+                            <p><a href="#">Volunteer</a></p>
+                            <p><a href="#">Sponsor an Event</a></p>
+                            <p><a href="#">Apply for Fellowship</a></p>
+                            <p><a href="#">Suggest an Event</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Michigan Technology Network - Lansing. All rights reserved.</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
