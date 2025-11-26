@@ -24,14 +24,6 @@
             padding: 20px;
         }
         
-        .mockup-title {
-            text-align: center;
-            font-size: 36px;
-            color: #1e3a8a;
-            margin: 40px 0;
-            font-weight: bold;
-        }
-        
         .mockup-section {
             margin-bottom: 60px;
             background: white;
@@ -320,7 +312,6 @@
         }
         
         .about-image {
-            background: #e2e8f0;
             border-radius: 12px;
             height: 300px;
             display: flex;
@@ -447,16 +438,7 @@
             border-top: 1px solid #3b82f6;
             color: #cbd5e1;
         }
-        
-        .mobile-note {
-            background: #22c55e;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-        
+         
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -488,21 +470,15 @@
 </head>
 <body>
     <div class="mockup-container">
-        <h1 class="mockup-title">MITN - Lansing </h1>
-        <div class="mobile-note">📱 Responsive design - all layouts adapt to mobile devices</div>
-        
-        <!-- Homepage Mockup -->
         <div class="mockup-section">
-            <div class="mockup-header">Homepage Design</div>
+            <div class="mockup-header"></div>
             <div class="mockup-content homepage">
                 <nav class="nav-bar">
                     <div class="logo">MITN - Lansing</div>
                     <div class="nav-links">
-                        <a href="#" class="nav-link active">Home</a>
-                        <a href="#" class="nav-link">About</a>
-                        <a href="#" class="nav-link">Events</a>
-                        <a href="#" class="nav-link">Fellowship</a>
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#events" class="nav-link">Events</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </div>
                 </nav>
                 
@@ -510,8 +486,7 @@
                     <h1>Michigan Technology Network</h1>
                     <p>Connecting and empowering tech professionals across Greater Lansing through education, networking, and community building</p>
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary">Join Our Community</a>
-                        <a href="#" class="btn btn-secondary">Upcoming Events</a>
+                        <a href="https://slack.lansing.codes" class="btn btn-primary">Join Our Community</a>
                     </div>
                 </section>
                 
@@ -524,74 +499,13 @@
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">🎓</div>
-                            <h3 class="feature-title">Educational Programs</h3>
+                            <h3 class="feature-title">Educational Events</h3>
                             <p class="feature-desc">Enhance your skills through workshops, presentations, and learning opportunities designed for all experience levels.</p>
                         </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">💰</div>
-                            <h3 class="feature-title">Fellowship Program</h3>
-                            <p class="feature-desc">Annual $2,500 fellowships supporting technology-based educational initiatives in our community.</p>
-                        </div>
                     </div>
                 </section>
-                
-                <section class="upcoming-events">
-                    <h2 class="section-title">Upcoming Events</h2>
-                    <div class="events-grid">
-                        <div class="event-card">
-                            <div class="event-date">
-                                <div class="event-day">15</div>
-                                <div class="event-month">JUN 2025</div>
-                            </div>
-                            <div class="event-content">
-                                <h3 class="event-title">MITN Summer Networking Mixer</h3>
-                                <div class="event-details">📍 Reno's East, East Lansing • 6:00-8:00 PM</div>
-                                <p class="event-desc">Join us for our summer networking event! Connect with local tech professionals, share experiences, and build lasting relationships in the Lansing tech community.</p>
-                            </div>
-                        </div>
-                        <div class="event-card">
-                            <div class="event-date">
-                                <div class="event-day">22</div>
-                                <div class="event-month">JUN 2025</div>
-                            </div>
-                            <div class="event-content">
-                                <h3 class="event-title">AI & Machine Learning Workshop</h3>
-                                <div class="event-details">📍 LCC West Campus • 1:00-4:00 PM</div>
-                                <p class="event-desc">Hands-on workshop exploring the latest trends in AI and machine learning. Perfect for developers looking to expand their skillset.</p>
-                            </div>
-                        </div>
-                        <div class="event-card">
-                            <div class="event-date">
-                                <div class="event-day">05</div>
-                                <div class="event-month">JUL 2025</div>
-                            </div>
-                            <div class="event-content">
-                                <h3 class="event-title">Fellowship Application Deadline</h3>
-                                <div class="event-details">💰 $2,500 Award • Online Application</div>
-                                <p class="event-desc">Last chance to apply for our annual fellowship program supporting technology-based educational initiatives.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        
-        <!-- About Page Mockup -->
-        <div class="mockup-section">
-            <div class="mockup-header">About Page Design</div>
-            <div class="mockup-content">
-                <nav class="nav-bar">
-                    <div class="logo">MITN - Lansing</div>
-                    <div class="nav-links">
-                        <a href="#" class="nav-link">Home</a>
-                        <a href="#" class="nav-link active">About</a>
-                        <a href="#" class="nav-link">Events</a>
-                        <a href="#" class="nav-link">Fellowship</a>
-                        <a href="#" class="nav-link">Contact</a>
-                    </div>
-                </nav>
-                
-                <section class="about-hero">
+
+                <section class="about-hero" id="about">
                     <h1 class="about-title">About MITN - Lansing</h1>
                     <p class="about-subtitle">Strengthening Michigan's technology community through connection, education, and collaboration</p>
                 </section>
@@ -604,141 +518,80 @@
                             <p>We believe that by connecting talented individuals and providing opportunities for growth, we can strengthen the entire technology ecosystem in Michigan.</p>
                         </div>
                         <div class="about-image">
-                            [Mission Image Placeholder]
+                            <img src="./capitol.jpg" height="100%" width="100%"/>
                         </div>
                     </div>
                     
                     <div class="about-grid">
                         <div class="about-image">
-                            [Community Image Placeholder]
+                            <img src="./mitn-logo.png" height="100%" width="50%"/>
                         </div>
                         <div class="about-text">
                             <h3>What We Do</h3>
                             <p>MITN organizes regular networking events, educational workshops, and collaborative sessions that bring together professionals from across the technology spectrum. From seasoned developers to emerging talent, our community welcomes everyone.</p>
-                            <p>Our annual Fellowship program provides $2,500 awards to support technology-based educational initiatives, helping to grow the next generation of tech leaders in Michigan.</p>
                         </div>
                     </div>
                 </section>
                 
-                <section class="stats-section">
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Community Members</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Events Hosted</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Fellowship Recipients</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">10</div>
-                            <div class="stat-label">Years Active</div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        
-        <!-- Events Page Mockup -->
-        <div class="mockup-section">
-            <div class="mockup-header">Events Page Design</div>
-            <div class="mockup-content">
-                <nav class="nav-bar">
-                    <div class="logo">MITN - Lansing</div>
-                    <div class="nav-links">
-                        <a href="#" class="nav-link">Home</a>
-                        <a href="#" class="nav-link">About</a>
-                        <a href="#" class="nav-link active">Events</a>
-                        <a href="#" class="nav-link">Fellowship</a>
-                        <a href="#" class="nav-link">Contact</a>
-                    </div>
-                </nav>
-                
-                <section class="events-header">
-                    <h1 class="events-title">Events & Workshops</h1>
-                    <p>Join us for networking, learning, and community building opportunities</p>
-                </section>
-                
-                <section class="events-filter">
-                    <div class="filter-tabs">
-                        <div class="filter-tab active">All Events</div>
-                        <div class="filter-tab">Networking</div>
-                        <div class="filter-tab">Workshops</div>
-                        <div class="filter-tab">Conferences</div>
-                        <div class="filter-tab">Social</div>
-                    </div>
-                </section>
-                
-                <section class="events-list">
+                <section class="upcoming-events" id="events">
+                    <h2 class="section-title">Upcoming Events</h2>
                     <div class="events-grid">
                         <div class="event-card">
                             <div class="event-date">
-                                <div class="event-day">15</div>
-                                <div class="event-month">JUN 2025</div>
+                                <div class="event-day">2</div>
+                                <div class="event-month">DEC 2025</div>
                             </div>
                             <div class="event-content">
-                                <h3 class="event-title">MITN Summer Networking Mixer</h3>
-                                <div class="event-details">📍 Reno's East, East Lansing • 6:00-8:00 PM</div>
-                                <p class="event-desc">Join us for our summer networking event! Connect with local tech professionals, share experiences, and build lasting relationships.</p>
+                                <h3 class="event-title">2nd Annual Joint Holiday Mixer</h3>
+                                <div class="event-details">📍 Cask & Co Kitchen & Bar, Lansing • 4:00-7:00 PM</div>
+                                <p class="event-desc">Join CATECH and Lansing Codes for our <a href="https://www.meetup.com/lansing-codes-meetup/events/311990602/">2nd Annual Joint Holiday Mixer</a>! Connect with local tech professionals, share experiences, and build lasting relationships in the Lansing tech community.</p>
                             </div>
                         </div>
                         <div class="event-card">
                             <div class="event-date">
-                                <div class="event-day">22</div>
-                                <div class="event-month">JUN 2025</div>
+                                <div class="event-day">9</div>
+                                <div class="event-month">DEC 2025</div>
                             </div>
                             <div class="event-content">
-                                <h3 class="event-title">AI & Machine Learning Workshop</h3>
-                                <div class="event-details">📍 LCC West Campus • 1:00-4:00 PM</div>
-                                <p class="event-desc">Hands-on workshop exploring the latest trends in AI and machine learning. Perfect for expanding your skillset.</p>
+                                <h3 class="event-title">Demo Camp Lansing</h3>
+                                <div class="event-details">📍 MSUFCU HQ1 • 4:30-7:30 PM</div>
+                                <p class="event-desc"><a href="https://www.meetup.com/lansing-codes-meetup/events/312022628/">Demo Camp Lansing</a> is where our awesome tech community comes together to showcase what they've built.</p>
                             </div>
                         </div>
                         <div class="event-card">
                             <div class="event-date">
-                                <div class="event-day">08</div>
-                                <div class="event-month">JUL 2025</div>
+                                <div class="event-day">upcoming</div>
+                                <div class="event-month">2026</div>
                             </div>
                             <div class="event-content">
-                                <h3 class="event-title">Cybersecurity Best Practices</h3>
-                                <div class="event-details">📍 Virtual Event • 12:00-2:00 PM</div>
-                                <p class="event-desc">Learn essential cybersecurity practices for modern development. Includes real-world case studies and practical tools.</p>
+                                <h3 class="event-title">Monthly Events</h3>
+                                <div class="event-details">New events every month</div>
+                                <p class="event-desc">Visit <a href="https://www.lansing.codes">Lansing Codes</a> to see the full events calendar. We have a variety of meetups and activities to keep you engaged and connected.</p>
                             </div>
                         </div>
                     </div>
                 </section>
-                
+
                 <footer class="footer">
                     <div class="footer-content">
                         <div class="footer-section">
                             <h4>MITN - Lansing</h4>
                             <p>Michigan Technology Network</p>
-                            <p>Greater Lansing, MI</p>
+                            <p>Lansing, MI</p>
                             <p>Building tech community since 2014</p>
                         </div>
                         <div class="footer-section">
                             <h4>Quick Links</h4>
-                            <p><a href="#">About Us</a></p>
-                            <p><a href="#">Upcoming Events</a></p>
-                            <p><a href="#">Fellowship Program</a></p>
-                            <p><a href="#">Contact</a></p>
+                            <p><a href="#about">About Us</a></p>
+                            <p><a href="#events">Upcoming Events</a></p>
+                            <p><a href="#contact">Contact</a></p>
                         </div>
                         <div class="footer-section">
                             <h4>Connect</h4>
-                            <p><a href="#">Join Our Mailing List</a></p>
-                            <p><a href="#">LinkedIn</a></p>
-                            <p><a href="#">Twitter</a></p>
-                            <p><a href="#">GitHub</a></p>
-                        </div>
-                        <div class="footer-section">
-                            <h4>Get Involved</h4>
-                            <p><a href="#">Volunteer</a></p>
-                            <p><a href="#">Sponsor an Event</a></p>
-                            <p><a href="#">Apply for Fellowship</a></p>
-                            <p><a href="#">Suggest an Event</a></p>
+                            <p><a href="http://eepurl.com/dGdYtr">Join Our Mailing List</a></p>
+                            <p><a href="https://www.linkedin.com/in/lansing-codes-958917329/">LinkedIn</a></p>
+                            <p><a href="https://x.com/lansingcodes">X</a></p>
+                            <p><a href="https://bsky.app/profile/mitn-lansing.bsky.social">BlueSky</a></p>
                         </div>
                     </div>
                     <div class="footer-bottom">
